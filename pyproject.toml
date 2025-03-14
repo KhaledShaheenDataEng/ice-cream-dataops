@@ -1,14 +1,13 @@
 [project]
-name = "ice-cream-dataops"
+name = "ice-cream-dataops-1"
 version = "0.1.0"
 description = ""
 authors = [
     {name = "“KhaledShaheenDataEng”",email = "“khaled.shaheen@cognite.com”"}
 ]
 readme = "README.md"
-requires-python = ">=3.11,<4.0"
+requires-python = ">=3.11"
 dependencies = [
-    "cognite-toolkit (==0.3.29)"
 ]
 
 

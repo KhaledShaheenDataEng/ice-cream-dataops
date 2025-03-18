@@ -5,7 +5,7 @@ modules:
   - name: ice_cream_api
     location:
       path: modules/bootcamp/ice_cream_api
-      hash: c6e11471
+      hash: c37f8a81
     build_variables:
     - key: CDF_PROJECT
       value: cdf-bootcamp-72-test
@@ -181,7 +181,20 @@ modules:
           path: /Users/khaled.shaheen@cognitedata.com/Desktop/ice-cream-dataops/ice-cream-dataops/modules/bootcamp/ice_cream_api/hosted_extractors/hosted_extractor_timeseries/timeseries.Source.yaml
           hash: 4ff06f0d
         kind: Source
-      functions: []
+      functions:
+      - identifier:
+          externalId: icapi_datapoints_extractor
+        source:
+          path: /Users/khaled.shaheen@cognitedata.com/Desktop/ice-cream-dataops/ice-cream-dataops/modules/bootcamp/ice_cream_api/functions/functions.Function.yaml
+          hash: b0f806a5
+        kind: Function
+      - identifier:
+          functionExternalId: icapi_datapoints_extractor
+          name: Frontfill every 10 minutes for the last hour of data (streamer)
+        source:
+          path: /Users/khaled.shaheen@cognitedata.com/Desktop/ice-cream-dataops/ice-cream-dataops/modules/bootcamp/ice_cream_api/functions/schedules.Schedule.yaml
+          hash: 9ecc06cd
+        kind: Schedule
       data_sets:
       - identifier:
           externalId: ds_icapi
@@ -209,7 +222,7 @@ modules:
   - name: oee
     location:
       path: modules/bootcamp/use_cases/oee
-      hash: 0441d210
+      hash: a6b2ce99
     build_variables:
     - key: CDF_PROJECT
       value: cdf-bootcamp-72-test
@@ -302,7 +315,20 @@ modules:
           path: /Users/khaled.shaheen@cognitedata.com/Desktop/ice-cream-dataops/ice-cream-dataops/modules/bootcamp/use_cases/oee/auth/data_pipeline_oee.Group.yaml
           hash: 3bc734fa
         kind: Group
-      functions: []
+      functions:
+      - identifier:
+          externalId: oee_timeseries
+        source:
+          path: /Users/khaled.shaheen@cognitedata.com/Desktop/ice-cream-dataops/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/functions.Function.yaml
+          hash: b4795e39
+        kind: Function
+      - identifier:
+          functionExternalId: oee_timeseries
+          name: Run calculations every 5 minutes for last hour of data
+        source:
+          path: /Users/khaled.shaheen@cognitedata.com/Desktop/ice-cream-dataops/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/schedules.Schedule.yaml
+          hash: 0cc26f4c
+        kind: Schedule
       data_sets:
       - identifier:
           externalId: ds_icapi
@@ -310,7 +336,7 @@ modules:
           path: /Users/khaled.shaheen@cognitedata.com/Desktop/ice-cream-dataops/ice-cream-dataops/modules/bootcamp/use_cases/oee/data_sets/data_sets.DataSet.yaml
           hash: dee15eb4
         kind: DataSet
-    warning_count: 1
+    warning_count: 0
     status: Success
     iteration: 1
   - name: data_foundation

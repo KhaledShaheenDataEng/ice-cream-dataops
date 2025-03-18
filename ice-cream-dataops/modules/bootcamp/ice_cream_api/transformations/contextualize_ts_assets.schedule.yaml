@@ -1,0 +1,4 @@
+externalId: 'contextualize_ts_assets'
+interval: 42 0 * * *
+
+

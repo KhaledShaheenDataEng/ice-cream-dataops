@@ -9,6 +9,7 @@ environment:
 
 
 variables:
+
   modules:
     bootcamp:
       CDF_PROJECT: cdf-bootcamp-72-prod # ex. cdf-bootcamp-01-test

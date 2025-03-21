@@ -24,6 +24,7 @@ variables:
       readwrite_source_id: 302f5845-837e-4bed-bd58-1041294571ef  # ex. xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
       icapi_extractors_source_id: 1ec16398-a432-40f9-8055-0f5ab17575d7 # ex. xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
 
+
       # Client Ids (App registrations or Service Principals)
       data_pipeline_oee_client_id: ${DATA_PIPELINE_OEE_CLIENT_ID} # replaced by .env
       data_pipeline_oee_client_secret: ${DATA_PIPELINE_OEE_CLIENT_SECRET} # replaced by .env
